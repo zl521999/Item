@@ -6,7 +6,7 @@
       content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <title>外卖</title>
     <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_1302601_36kz55wbzst.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1302601_yc93mm59yz.css">
     <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
     <script>
       if ('addEventListener' in document) {
@@ -17,6 +17,10 @@
       if(!window.Promise) {
         document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
       }
+    </script>
+    <script>
+      //解决lib-flexible不兼容ipad、ipad pro
+      /(iPad|iPhone OS|iPod|iOS)/i.test(navigator.userAgent)&&(head=document.getElementsByTagName('head'),viewport=document.createElement('meta'),viewport.name='viewport',viewport.content='target-densitydpi=device-dpi, width=540px, user-scalable=no',head.length>0&&head[head.length-1].appendChild(viewport));
     </script>
   </head>
   <body>

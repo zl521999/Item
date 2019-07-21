@@ -10,9 +10,13 @@
         <i class="iconfont icon-sousuo"></i>
       </span>
       <input type="text" placeholder="搜索商品~~~~~~款好物" />
-      <button>登录</button>
-    </section>
+      <button @click="goto('/personal')">登录</button>
+    
+      <BScroll/>  
 
+    </section>
+    
+    
     <!-- 首页轮播 -->
     <div class="swiper-container">
       <div class="swiper-wrapper">
@@ -66,7 +70,16 @@
         </div>
       </div>
       <!-- 如果需要分页器 -->
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination">
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>
+      </div>
     </div>
 
     <!-- 首页列表1 -->
@@ -139,15 +152,12 @@
           新人专享礼
           <i class="iconfont icon-jianhao"></i>
         </span>
-         
       </div>
       <div class="content-con">
         <div class="con-left">
-          <div class="name">
-            新人专享礼包
-          </div>
+          <div class="name">新人专享礼包</div>
           <div class="imgWrap">
-            <img src="//yanxuan.nosdn.127.net/ba4d635ec94ad95b28bfab6500900659.png" alt="">
+            <img src="//yanxuan.nosdn.127.net/ba4d635ec94ad95b28bfab6500900659.png" alt />
           </div>
         </div>
         <div class="con-right">
@@ -157,24 +167,34 @@
               <span>今日特价</span>
             </div>
             <div class="cr1-right">
-              <img src="https://yanxuan.nosdn.127.net/d2abd30e0296cdee86f1bdd9242c0937.png?imageView&thumbnail=200x200&quality=75" alt="">
+              <img
+                src="https://yanxuan.nosdn.127.net/d2abd30e0296cdee86f1bdd9242c0937.png?imageView&thumbnail=200x200&quality=75"
+                alt
+              />
               <div class="disc">
                 <p>￥189</p>
-                <p><del>219</del></p>
+                <p>
+                  <del>219</del>
+                </p>
               </div>
-           </div>
+            </div>
           </div>
           <div class="cr2">
             <div class="cr2-left">
-               <p>新人拼团</p>
-               <span>1元起包邮</span>
+              <p>新人拼团</p>
+              <span>1元起包邮</span>
             </div>
             <div class="cr2-right">
-              <img src="https://yanxuan.nosdn.127.net/00382181864967c1125b75bd5289c8d3.png?imageView&thumbnail=200x200&quality=75" alt="">
+              <img
+                src="https://yanxuan.nosdn.127.net/00382181864967c1125b75bd5289c8d3.png?imageView&thumbnail=200x200&quality=75"
+                alt
+              />
               <div class="disc">
                 <p>￥1</p>
-                <p><del>15</del></p>
-              </div>  
+                <p>
+                  <del>15</del>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -183,12 +203,276 @@
 
     <!-- 内容2 -->
     <div class="content2">
-
+      <div class="con-title">
+        <div class="con2-list">
+          <div class="listShop2">品牌制造商直供</div>
+          <div class="listShop3">
+            更多
+            <i class="iconfont icon-arrow"></i>
+          </div>
+        </div>
+      </div>
+      <div class="con-content">
+        <li class="listShop4">
+          <img
+            src="https://yanxuan.nosdn.127.net/74e2ea8f81004d0a60f90fc8e4649058.png?imageView&thumbnail=343y260&enlarge=1"
+            alt
+          />
+          <div class="lifont">
+            <h4>海外制造商</h4>
+            <h5>9.9元起</h5>
+          </div>
+        </li>
+        <li class="listShop4">
+          <img
+            src="https://yanxuan.nosdn.127.net/c097be14110f769d58245cdad73e15c3.png?imageView&thumbnail=343y260&enlarge=1"
+            alt
+          />
+          <div class="lifont">
+            <h4>CK制造商</h4>
+            <h5>29.9元起</h5>
+          </div>
+        </li>
+        <li class="listShop4">
+          <img
+            src="https://yanxuan.nosdn.127.net/66a23d776f41cba70d00803a5231124b.png?imageView&thumbnail=343y260&enlarge=1"
+            alt
+          />
+          <div class="lifont">
+            <h4>新秀丽制造商</h4>
+            <h5>169元起</h5>
+          </div>
+        </li>
+        <li class="listShop4">
+          <img
+            src="https://yanxuan.nosdn.127.net/3bf5a8a2f6eef284ecb40806ae9ce043.png?imageView&thumbnail=343y260&enlarge=1"
+            alt
+          />
+          <div class="lifont">
+            <h4>Nice West制造商</h4>
+            <h5>219元起</h5>
+          </div>
+        </li>
+      </div>
     </div>
 
+    <!-- 内容3 -->
+    <div class="content3">
+      <div class="con-title3">
+        <div class="con3-list">
+          <div class="listShop2">类目热销榜</div>
+        </div>
+      </div>
+      <div class="con-content">
+        <div class="con-left">
+          <div>
+            <p>热销榜</p>
+            <i class="iconfont icon-jianhao"></i>
+          </div>
+          <img
+            src="https://yanxuan.nosdn.127.net/bb032dd258a8b8c638f0cd8af92202e3.png?imageView&quality=65&thumbnail=200x200"
+            alt
+          />
+        </div>
+
+        <div class="con-right">
+          <div>
+            <p>好评榜</p>
+            <i class="iconfont icon-jianhao"></i>
+          </div>
+          <img
+            src="https://yanxuan.nosdn.127.net/7dd208d4eb386ca3fc0f794963a0d70e.png?imageView&quality=65&thumbnail=200x200"
+            alt
+          />
+        </div>
+      </div>
+
+      <div class="conT">
+        <li class="listShop4">
+          <img
+            src="https://yanxuan.nosdn.127.net/768355bca1c186c0c25de88bd1272d8c.png?imageView&quality=65&thumbnail=200x200"
+            alt
+          />
+          <div class="lifont">
+            <h4>居家生活榜</h4>
+          </div>
+        </li>
+        <li class="listShop4">
+          <img
+            src="https://yanxuan.nosdn.127.net/9d581d4ec02cf86ff2a05cf81868f159.png?imageView&quality=65&thumbnail=200x200"
+            alt
+          />
+          <div class="lifont">
+            <h4>美食酒水榜</h4>
+          </div>
+        </li>
+        <li class="listShop4">
+          <img
+            src="https://yanxuan.nosdn.127.net/06388e29fad0b7e8a9d6b1f398e5dcd3.png?imageView&quality=65&thumbnail=200x200"
+            alt
+          />
+          <div class="lifont">
+            <h4>服饰鞋包榜</h4>
+          </div>
+        </li>
+        <li class="listShop4">
+          <img
+            src="https://yanxuan.nosdn.127.net/fddaa18690fa0b53d2d59ab7bd26b8f9.png?imageView&quality=65&thumbnail=200x200"
+            alt
+          />
+          <div class="lifont">
+            <h4>个护清洁榜</h4>
+          </div>
+        </li>
+        <li class="listShop4">
+          <img
+            src="https://yanxuan.nosdn.127.net/271eb0b3d94e80579afdeb614cc240ad.png?imageView&quality=65&thumbnail=200x200"
+            alt
+          />
+          <div class="lifont">
+            <h4>运动旅行榜</h4>
+          </div>
+        </li>
+        <li class="listShop4">
+          <img
+            src="https://yanxuan.nosdn.127.net/79fb28d0a101f704d2fa3665273dbc1a.png?imageView&quality=65&thumbnail=200x200"
+            alt
+          />
+          <div class="lifont">
+            <h4>数码家电榜</h4>
+          </div>
+        </li>
+        <li class="listShop4">
+          <img
+            src="https://yanxuan.nosdn.127.net/f444ac11115a8249a92dc95dccad6e07.png?imageView&quality=65&thumbnail=200x200"
+            alt
+          />
+          <div class="lifont">
+            <h4>母婴亲子榜</h4>
+          </div>
+        </li>
+        <li class="listShop4">
+          <img
+            src="https://yanxuan.nosdn.127.net/630db6838c0cce666f7641469275a0ab.png?imageView&quality=65&thumbnail=200x200"
+            alt
+          />
+          <div class="lifont">
+            <h4>全球特色榜</h4>
+          </div>
+        </li>
+      </div>
+    </div>
+
+    <!-- 内容4-->
+    <div class="content4">
+      <div class="con-title4">
+        <div class="con4-list">
+          <div class="listShop2">人气推荐</div>
+          <div class="listShop3">
+            更多
+            <i class="iconfont icon-arrow"></i>
+          </div>
+        </div>
+      </div>
+      <div class="con-content">
+        <div class="con4">
+          <div class="con4L">
+            <img
+              src="https://yanxuan.nosdn.127.net/bb032dd258a8b8c638f0cd8af92202e3.png?imageView&quality=65&thumbnail=280x280"
+              alt
+            />
+          </div>
+          <div class="con4R">
+            <div class="conC">
+              <div class="conC1">好货内部价</div>
+              <div class="conC2">超冷感吸放湿双面夏凉被 可机洗</div>
+              <div class="conC3">冷感+亲肤，享受双面睡感</div>
+              <div class="conC4">￥179</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="con4List">
+          <div class="con4li">
+            <a href="javascript:;" class="con4lia">
+              <img src="https://yanxuan.nosdn.127.net/4114839cec128a22b8f60ddafec3f944.png?imageView&quality=65&thumbnail=330x330" alt="">
+              <div class="name">
+                <span>红豆薏米丸 100克</span>
+                <span class="nameprice">￥39</span>
+              </div>
+              <div class="price">
+                加价购
+              </div>
+
+              <div class="namelist">
+                <li>2</li>
+                <li>个</li>
+                <li>规</li>
+                <li>格</li>
+              </div>    
 
 
+            </a>
+          </div>
+          <div class="con4li">
+            <a href="javascript:;" class="con4lia">
+              <img src="https://yanxuan.nosdn.127.net/604941c1a657e49f4114dabb201ab2aa.png?imageView&quality=65&thumbnail=330x330" alt="">
+              <div class="name">
+                <span>智能降温保冷杯</span>
+                <span class="nameprice">￥199</span>
+              </div>
+              
 
+              <div class="namelist">
+                <li>3</li>
+                <li>色</li>
+                <li>可</li>
+                <li>选</li>
+              </div>  
+
+
+            </a>
+          </div>
+          <div class="con4li lastchild">
+            <a href="javascript:;" class="con4lia">
+              <img src="https://yanxuan.nosdn.127.net/ecee79b50e2364ec4abbae6c26a983a4.png?imageView&quality=65&thumbnail=330x330" alt="">
+              <div class="name">
+                <span>追风 男式轻弹慢跑运动鞋</span>
+                <span class="nameprice">￥155</span>
+              </div>
+              <div class="price">
+                特价
+              </div>
+
+              <div class="namelist">
+                <li>3</li>
+                <li>色</li>
+                <li>可</li>
+                <li>选</li>
+              </div>    
+
+
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 首页底部 -->
+    <div class="homeFooter">
+      <div class="footer-con">
+          
+          <ul class="footer-t">
+            <li><a href="https://m.you.163.com/downloadapp?_stat_from=search_pz_baidu_29&appAwakeUrl=http%3a%2f%2fm.you.163.com">下载App</a></li>
+            <li><a href="https://you.163.com/?_m_forcepc_=true&_m_anonid_=7d8869f2-6731-4ee9-960c-c1cd93436113">电脑版</a></li>
+          </ul>
+
+          <div class="footer-b">
+            <span>网易公司版权所有 © 1997-2019</span>
+            <p>食品经营许可证：JY13301080111719</p>
+          </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -196,7 +480,20 @@
 import Swiper from "swiper";
 import "swiper/dist/css/swiper.css";
 
+import BScroll from "../../components/BScroll/BScroll"
+
 export default {
+
+  components:{
+    BScroll
+  },
+
+  methods: {
+    goto(path){
+      this.$router.push(path)
+    }
+  },
+
   mounted() {
     var mySwiper = new Swiper(".swiper-container", {
       //direction: 'vertical', // 垂直切换选项
@@ -220,14 +517,17 @@ export default {
 @import '../../common/stylus/mixins.styl'
 #homeContainer
   width 100%
-  height 9999px
+  height 4370px
   background #ededed
+  position relative
   .homeHeader
-    position relative
+    position fixed
     width 100%
+    height 80px
     padding 20px
     display flex
     background #fff
+    z-index 20
     img
       width 140px
       height 40px
@@ -255,10 +555,12 @@ export default {
       height 50px
       margin-left 10px
       margin-top 5px
+      font-size 28px
   .swiper-container
     width 100%
     height 370px
     position relative
+    padding-top 182px
     .swiper-wrapper
       width 100%
       height 370px
@@ -268,6 +570,17 @@ export default {
         img
           width 100%
           height 100%
+    .swiper-pagination
+      .swiper-pagination-bullet
+        width 50px
+        height 5px
+        display inline-block
+        background #fff
+        opacity 0.4
+        border-radius 0
+        &.swiper-pagination-bullet-active
+          opacity 1
+          background #fff
   .wangyi
     bottom-border-1px(#ededed)
     width 100%
@@ -296,6 +609,7 @@ export default {
       float left
       margin 18px
       text-align center
+      flex-grow 2
       img
         width 110px
         height 110px
@@ -311,7 +625,6 @@ export default {
     .content-title
       width 100%
       height 100px
-      
       text-align center
       line-height 90px
       font-size 36px
@@ -340,7 +653,6 @@ export default {
         .cr1
           width 100%
           height 49%
-          
           .cr1-left
             width 50%
             height 100%
@@ -350,7 +662,7 @@ export default {
               font-size 36px
               padding 20px 0 20px 20px
             span
-              color #7F7F7F;
+              color #7F7F7F
               font-size 28px
               margin-left 20px
           .cr1-right
@@ -378,7 +690,6 @@ export default {
         .cr2
           width 100%
           height 49%
-          
           margin-top 10px
           .cr2-left
             width 50%
@@ -419,21 +730,333 @@ export default {
                 padding-top 10px
   .content2
     width 100%
-    height 600px
+    height 700px
     margin-top 30px
-    background red
-
-
+    background #fff
+    .con-title
+      width 100%
+      height 100px
+      .con2-list
+        width 100%
+        height 100px
+        .listShop2
+          float left
+          font-size 36px
+          margin 20px
+        .listShop3
+          float right
+          font-size 30px
+          margin 20px 15px 0
+    .con-content
+      width 95%
+      height 526px
+      margin 20px
+      .listShop4
+        position relative
+        width 345px
+        height 260px
+        background #eee
+        float left
+        margin-bottom 6px
+        margin-right 6px
+        img
+          width 345px
+          height 260px
+        .lifont
+          position absolute
+          left 0
+          top 0
+          width 100%
+          height 90px
+          h4, h5
+            line-height 50px
+            text-align center
+            font-size 32px
+            color #333
+          h5
+            font-size 28px
+            color #7f7f7f
+  .content3
+    width 100%
+    height 730px
+    margin-top 30px
+    background #fff
+    .con-title3
+      width 100%
+      height 100px
+      .con3-list
+        width 100%
+        height 100px
+        .listShop2
+          float left
+          font-size 36px
+          margin 20px
+    .con-content
+      width 95%
+      height 200px
+      margin 20px
+      .con-left
+        width 347px
+        height 200px
+        background #f9f3e4
+        float left
+        display flex
+        justify-content space-around
+        align-items center
+        font-size 32px
+        .iconfont
+          color #f40
+        img
+          width 200px
+          height 200px
+      .con-right
+        float right
+        width 347px
+        height 200px
+        background #EBEFF6
+        display flex
+        justify-content space-around
+        align-items center
+        font-size 32px
+        .iconfont
+          color #f40
+        img
+          width 200px
+          height 200px
+    .conT
+      width 95%
+      height 367px
+      margin 20px
+      .listShop4
+        position relative
+        width 170px
+        height 180px
+        background #eee
+        float left
+        margin-bottom 6px
+        margin-right 5px
+        img
+          width 120px
+          height 120px
+          margin 70px 0 0 30px
+        .lifont
+          position absolute
+          left 0
+          top 20px
+          width 100%
+          height 90px
+          h4
+            line-height 50px
+            text-align center
+            font-size 28px
+            color #333
+  .content4
+    width 100%
+    height 800px
+    margin-top 30px
+    background #fff
+    .con-title4
+      width 100%
+      height 100px
+      .con4-list
+        width 100%
+        height 100px
+        .listShop2
+          float left
+          font-size 36px
+          margin 20px
+        .listShop3
+          float right
+          font-size 30px
+          margin 20px 15px 0
+    .con-content
+      height 526px
+      margin 20px
       
-     
+      .con4
+        width 700px
+        height 280px
+        
+        .con4L
+          width 280px
+          height 280px
+          background #FEF2E3
+          float left
+          img
+            width 280px
+            height 280px
+        .con4R
+          float right
+          width 420px
+          height 280px
+          background #FEF0DF
+          .conC
+            width 350px
+            height 160px
+            background #FEF0DF
+            margin 60px auto
+            .conC1
+              width 130px
+              background rgba(255, 255, 255, 0.9)
+              border 1px solid #B4282D
+              color #B4282D
+              border-radius 5px
+              padding 5px 10px
+              text-align center
+              margin-bottom 10px
+            .conC2
+              width 340px
+              white-space nowrap
+              overflow hidden
+              text-overflow ellipsis
+              font-size 28px
+              margin-bottom 8px
+            .conC3
+              color #7f7f7f
+              white-space nowrap
+              overflow hidden
+              text-overflow ellipsis
+              margin-bottom 8px
+              font-size 26px
+            .conC4
+              color #b4282d
+              font-size 26px
+
+      .con4List
+        width 700px
+        height 354px
+        
+        margin-top 20px
+        .con4li
+          float left
+          width 216px
+          height 354px
+          
+          margin-right 24px
+          &.lastchild
+            margin-right 0px
+          .con4lia
+            position relative
+            width 216px
+            height 216px
+            display block
+            background #F5F5F5
+            img
+              width 216px
+              height 216px
+              margin-left 20px
+            .name
+              width 216px
+              height 72px
+              margin-top 20px
+              span
+                font-size 28px
+                white-space wrap
+                line-height 40px
+              .nameprice
+                 color #b4282d
+            .price
+                border 2px solid #b4282d
+                width 100px
+                height 30px
+                border-radius 50px
+                line-height 30px
+                text-align center
+                font-size 24px
+                margin-top 10px
+
+ 
+
+            .namelist
+              position absolute
+              border-radius 5px
+              border 2px solid #b4a078
+              color #b4a078
+              top 20px
+              left 10px
+              width 30px
+              height 100px
+              padding 10px 5px
+              text-align center
 
 
-     
-     
-    
+  .homeFooter
+    width 100%
+    height 245px
+    background #414141
+    position relative
+    .footer-con
+      position absolute
+      left 0
+      right 0
+      top 0
+      bottom 0
+      margin auto
+      width 650px
+      height 200px
       
-       
+      .footer-t
+        width 100%
+        height 62px
+        margin-top 20px
+        li
+          float left
+          width 170px
+          height 62px
+          line-height 62px
+          text-align center
+          border 2px solid #999
+          background #414141
+          margin-left 100px
+          border-radius 10px
+          a
+           color #fff
+           font-size 24px
+      .footer-b
+        width 100%
+        height 94px
+        
+        margin-top 30px
+        text-align center
+        padding-top 10px
+        color #999
+        span
+          font-size 26px
+          
+        p
+          font-size 26px
+          margin-top 10px 
+
+
+        
+
+
+
         
           
+
+
+
+
+
+
+
+
+           
+
+
+
+
+
+
+
+              
+
+
+
+
           
+
+        
+        
 </style>
