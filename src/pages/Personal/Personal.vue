@@ -5,13 +5,13 @@
       <img src="//yanxuan.nosdn.127.net/bd139d2c42205f749cd4ab78fa3d6c60.png" alt />
 
       <div class="phone">
-        <span @click="goto('/phone')">
+        <span @click="toPath('/personal/phone')">
           <i class="iconfont icon-phone"></i>手机号码登录
         </span>
       </div>
 
       <div class="email">
-        <span @click="goto('/email')">
+        <span @click="toPath('/personal/email')">
           <i class="iconfont icon-youxiang"></i>邮箱账号登录
         </span>
       </div>
@@ -54,10 +54,10 @@ export default {
     PersonalHeader
   },
    methods: {
-    goto(path) {
-      this.$router.push(path);
+      toPath (path) {
+        this.$router.push(path)
+      }
     }
-  }
 };
 </script>
 

@@ -4,8 +4,8 @@ import Picture from "../pages/Picture/Picture.vue"
 import Shop from "../pages/Shop/Shop.vue"
 import Sort from "../pages/Sort/Sort.vue"
 
-import phoneLogin from "../pages/Login/phoneLogin.vue"
-import emailLogin from "../pages/Login/emailLogin.vue"
+import Phone from "../pages/Personal/PersonalLogin/phoneLogin.vue"
+import Email from "../pages/Personal/PersonalLogin/emailLogin.vue"
 
 
 export default [
@@ -18,13 +18,13 @@ export default [
     component:Personal,
     children:[
       {
-        path:"/personal/phone",
-        component:phoneLogin
+        path: '/personal/phone',
+        component: Phone,
       },
       {
-        path:"/personal/email",
-        component:emailLogin
-      }
+        path: '/personal/email',
+        component: Email,
+      },
     ]
   },
   {
