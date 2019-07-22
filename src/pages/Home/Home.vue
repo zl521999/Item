@@ -11,12 +11,54 @@
       </span>
       <input type="text" placeholder="搜索商品~~~~~~款好物" />
       <button @click="goto('/personal')">登录</button>
-    
-      <BScroll/>  
+
+      <!--首页滚动列表  -->
+      <div class="Scroll">
+        <ul class="list">
+          <li class="liItem active">推荐</li>
+          <li class="liItem">居家生活</li>
+          <li class="liItem">服饰鞋包</li>
+          <li class="liItem">美食酒水</li>
+          <li class="liItem">个护清洁</li>
+          <li class="liItem">母婴亲子</li>
+          <li class="liItem">运动旅行</li>
+          <li class="liItem">数码家电</li>
+          <li class="liItem">全球特色</li>
+        </ul>
+        <div class="jiantou" @click="handlerArrow">
+          <i class="iconfont icon-ai-arrow-down"
+          :class="isArrow?'downArrow':'upArrow'"></i>
+        </div>
+      </div>
 
     </section>
-    
-    
+
+    <!-- 首页遮罩层 -->
+
+    <div class="wrap" v-show="isShow">
+      
+    </div>
+
+    <!-- 首页所有列表 -->
+    <div class="all" v-show="isShow">
+      <div class="allTitle">全部频道</div>
+       <div class="jiantou2" @click="handlerArrow">
+          <i class="iconfont icon-ai-arrow-down"
+          :class="isArrow?'downArrow':'upArrow'"></i>
+        </div> 
+      <ul class="allList">
+        <li class="liItem active">推荐</li>
+        <li class="liItem">居家生活</li>
+        <li class="liItem">服饰鞋包</li>
+        <li class="liItem">美食酒水</li>
+        <li class="liItem">个护清洁</li>
+        <li class="liItem">母婴亲子</li>
+        <li class="liItem">运动旅行</li>
+        <li class="liItem">数码家电</li>
+        <li class="liItem">全球特色</li>
+      </ul>
+    </div>
+
     <!-- 首页轮播 -->
     <div class="swiper-container">
       <div class="swiper-wrapper">
@@ -395,63 +437,61 @@
         <div class="con4List">
           <div class="con4li">
             <a href="javascript:;" class="con4lia">
-              <img src="https://yanxuan.nosdn.127.net/4114839cec128a22b8f60ddafec3f944.png?imageView&quality=65&thumbnail=330x330" alt="">
+              <img
+                src="https://yanxuan.nosdn.127.net/4114839cec128a22b8f60ddafec3f944.png?imageView&quality=65&thumbnail=330x330"
+                alt
+              />
               <div class="name">
                 <span>红豆薏米丸 100克</span>
                 <span class="nameprice">￥39</span>
               </div>
-              <div class="price">
-                加价购
-              </div>
+              <div class="price">加价购</div>
 
               <div class="namelist">
                 <li>2</li>
                 <li>个</li>
                 <li>规</li>
                 <li>格</li>
-              </div>    
-
-
+              </div>
             </a>
           </div>
           <div class="con4li">
             <a href="javascript:;" class="con4lia">
-              <img src="https://yanxuan.nosdn.127.net/604941c1a657e49f4114dabb201ab2aa.png?imageView&quality=65&thumbnail=330x330" alt="">
+              <img
+                src="https://yanxuan.nosdn.127.net/604941c1a657e49f4114dabb201ab2aa.png?imageView&quality=65&thumbnail=330x330"
+                alt
+              />
               <div class="name">
                 <span>智能降温保冷杯</span>
                 <span class="nameprice">￥199</span>
               </div>
-              
 
               <div class="namelist">
                 <li>3</li>
                 <li>色</li>
                 <li>可</li>
                 <li>选</li>
-              </div>  
-
-
+              </div>
             </a>
           </div>
           <div class="con4li lastchild">
             <a href="javascript:;" class="con4lia">
-              <img src="https://yanxuan.nosdn.127.net/ecee79b50e2364ec4abbae6c26a983a4.png?imageView&quality=65&thumbnail=330x330" alt="">
+              <img
+                src="https://yanxuan.nosdn.127.net/ecee79b50e2364ec4abbae6c26a983a4.png?imageView&quality=65&thumbnail=330x330"
+                alt
+              />
               <div class="name">
                 <span>追风 男式轻弹慢跑运动鞋</span>
                 <span class="nameprice">￥155</span>
               </div>
-              <div class="price">
-                特价
-              </div>
+              <div class="price">特价</div>
 
               <div class="namelist">
                 <li>3</li>
                 <li>色</li>
                 <li>可</li>
                 <li>选</li>
-              </div>    
-
-
+              </div>
             </a>
           </div>
         </div>
@@ -461,16 +501,23 @@
     <!-- 首页底部 -->
     <div class="homeFooter">
       <div class="footer-con">
-          
-          <ul class="footer-t">
-            <li><a href="https://m.you.163.com/downloadapp?_stat_from=search_pz_baidu_29&appAwakeUrl=http%3a%2f%2fm.you.163.com">下载App</a></li>
-            <li><a href="https://you.163.com/?_m_forcepc_=true&_m_anonid_=7d8869f2-6731-4ee9-960c-c1cd93436113">电脑版</a></li>
-          </ul>
+        <ul class="footer-t">
+          <li>
+            <a
+              href="https://m.you.163.com/downloadapp?_stat_from=search_pz_baidu_29&appAwakeUrl=http%3a%2f%2fm.you.163.com"
+            >下载App</a>
+          </li>
+          <li>
+            <a
+              href="https://you.163.com/?_m_forcepc_=true&_m_anonid_=7d8869f2-6731-4ee9-960c-c1cd93436113"
+            >电脑版</a>
+          </li>
+        </ul>
 
-          <div class="footer-b">
-            <span>网易公司版权所有 © 1997-2019</span>
-            <p>食品经营许可证：JY13301080111719</p>
-          </div>
+        <div class="footer-b">
+          <span>网易公司版权所有 © 1997-2019</span>
+          <p>食品经营许可证：JY13301080111719</p>
+        </div>
       </div>
     </div>
   </div>
@@ -480,21 +527,30 @@
 import Swiper from "swiper";
 import "swiper/dist/css/swiper.css";
 
-import BScroll from "../../components/BScroll/BScroll"
+import BScroll from "better-scroll";
 
 export default {
-
-  components:{
-    BScroll
+  data() {
+    return {
+      isShow: false,
+      isArrow:true,//默认箭头向下
+    };
   },
 
   methods: {
-    goto(path){
-      this.$router.push(path)
+
+    handlerArrow(){
+      this.isShow=!this.isShow
+      this.isArrow=!this.isArrow
+    },
+
+    goto(path) {
+      this.$router.push(path);
     }
   },
 
   mounted() {
+    //轮播
     var mySwiper = new Swiper(".swiper-container", {
       //direction: 'vertical', // 垂直切换选项
       loop: true, // 循环模式选项
@@ -509,6 +565,12 @@ export default {
         el: ".swiper-pagination"
       }
     });
+
+    // 横向滑动的ul
+    this.navScroll = new BScroll(".Scroll", {
+      scrollX: true,
+      click: true
+    });
   }
 };
 </script>
@@ -517,17 +579,17 @@ export default {
 @import '../../common/stylus/mixins.styl'
 #homeContainer
   width 100%
-  height 4370px
+  height 4350px
   background #ededed
-  position relative
+  
   .homeHeader
     position fixed
     width 100%
-    height 80px
+    height 100px
     padding 20px
     display flex
     background #fff
-    z-index 20
+    z-index 30
     img
       width 140px
       height 40px
@@ -556,6 +618,110 @@ export default {
       margin-left 10px
       margin-top 5px
       font-size 28px
+  .Scroll
+    width 100%
+    height 61px
+    position absolute
+    left 0
+    top 120px
+    overflow hidden
+    background #fff
+    z-index 20
+    .list
+      width 1700px
+      height 60px
+      background #fff
+      display flex
+      line-height 60px
+      .liItem
+        height 55px
+        font-size 28px
+        margin-left 30px
+        margin-right 20px
+        padding 0 10px
+        &.active
+          border-bottom 5px solid #f40
+    .jiantou
+      width 110px
+      height 60px
+      position absolute
+      top 0px
+      right 20px
+      background #fff
+      line-height 60px
+      text-align center
+      z-index 30
+      .iconfont
+        font-size 32px
+        display block
+      .downArrow
+        transform rotate(0deg)
+        transition all 0.5s
+      .upArrow
+        transform rotate(180deg)
+        transition all 0.5s
+        
+  .all
+    background-color #fff
+    height 372px
+    width 100%
+    color #333
+    top-border-1px(#eee)
+    position absolute
+    top 120px
+    left 0
+    z-index 30
+    .allTitle
+      width 100%
+      height 60px
+      line-height 60px
+      font-size 28px
+      padding-left 30px
+    .jiantou2
+      width 110px
+      height 60px
+      position absolute
+      top 0px
+      right -15px
+      background #fff
+      line-height 60px
+      text-align center
+      .iconfont
+        font-size 32px
+        display block
+      .downArrow
+        transform rotate(0deg)
+        transition all 0.5s
+      .upArrow
+        transform rotate(180deg)
+        transition all 0.5s
+
+    .allList
+      padding 24px 0 0 0
+      .liItem
+        width 150px
+        height 56px
+        line-height 56px
+        text-align center
+        border 2px solid #ccc
+        border-radius 4px
+        float left
+        font-size 28px
+        margin 0 0 40px 30px
+        background #fafafa
+        &.active
+          color #f40
+          border-color #f40
+  .wrap
+    position absolute
+    left 0
+    top 0
+    bottom 0
+    right 0
+    z-index 10
+    margin autp
+    background-color rgba(0, 0, 0, 0.5)
+    z-index 29
   .swiper-container
     width 100%
     height 370px
@@ -872,11 +1038,9 @@ export default {
     .con-content
       height 526px
       margin 20px
-      
       .con4
         width 700px
         height 280px
-        
         .con4L
           width 280px
           height 280px
@@ -921,17 +1085,14 @@ export default {
             .conC4
               color #b4282d
               font-size 26px
-
       .con4List
         width 700px
         height 354px
-        
         margin-top 20px
         .con4li
           float left
           width 216px
           height 354px
-          
           margin-right 24px
           &.lastchild
             margin-right 0px
@@ -954,19 +1115,16 @@ export default {
                 white-space wrap
                 line-height 40px
               .nameprice
-                 color #b4282d
+                color #b4282d
             .price
-                border 2px solid #b4282d
-                width 100px
-                height 30px
-                border-radius 50px
-                line-height 30px
-                text-align center
-                font-size 24px
-                margin-top 10px
-
- 
-
+              border 2px solid #b4282d
+              width 100px
+              height 30px
+              border-radius 50px
+              line-height 30px
+              text-align center
+              font-size 24px
+              margin-top 10px
             .namelist
               position absolute
               border-radius 5px
@@ -978,8 +1136,6 @@ export default {
               height 100px
               padding 10px 5px
               text-align center
-
-
   .homeFooter
     width 100%
     height 245px
@@ -994,7 +1150,6 @@ export default {
       margin auto
       width 650px
       height 200px
-      
       .footer-t
         width 100%
         height 62px
@@ -1010,53 +1165,18 @@ export default {
           margin-left 100px
           border-radius 10px
           a
-           color #fff
-           font-size 24px
+            color #fff
+            font-size 24px
       .footer-b
         width 100%
         height 94px
-        
         margin-top 30px
         text-align center
         padding-top 10px
         color #999
         span
           font-size 26px
-          
         p
           font-size 26px
-          margin-top 10px 
-
-
-        
-
-
-
-        
-          
-
-
-
-
-
-
-
-
-           
-
-
-
-
-
-
-
-              
-
-
-
-
-          
-
-        
-        
+          margin-top 10px
 </style>
