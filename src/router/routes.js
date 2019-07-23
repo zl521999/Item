@@ -14,9 +14,10 @@ export default [
     component:Home
   },
   {
-    path:"/personal",
-    component:Personal,
-    children:[
+    path: '/personal',
+    component: Personal,
+
+    children: [
       {
         path: '/personal/phone',
         component: Phone,

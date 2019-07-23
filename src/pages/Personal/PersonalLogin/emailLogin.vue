@@ -10,11 +10,15 @@
       <div class="loginInput">
         <div class="login">
           <div class="number">
-            <input type="text" placeholder="邮箱账号" />
+            <input type="text" placeholder="邮箱账号" 
+            v-model="email" maxlength="20" v-validate="`required|email`" name="email"/>
+            <span style="color:red;font-size:24px;text-align:center">{{ errors.first('email') }}</span>
           </div>
 
           <div class="news">
-            <input type="text" placeholder="密码" />
+            <input type="text" placeholder="密码" 
+            v-model="password" maxlength="16"  v-validate="{required:true,digits:'16'}" name="password"/>
+            <span style="color:red;font-size:24px;text-align:center">{{ errors.first('password') }}</span>
           </div>
 
           <div class="con">
@@ -27,7 +31,7 @@
           </div>
 
           <div class="btn3">
-            <button @click="toLoginEmail">其他登录方式</button>
+            <button @click="$router.back()">其他登录方式</button>
           </div>
 
           
@@ -40,13 +44,16 @@
 <script type="text/ecmascript-6">
 import PersonalHeader from "../../../components/PersonalHeader/PersonalHeader";
 export default {
-  components: {
-    PersonalHeader
-  },
 
-  props:{
-    toLoginEmail:Function,
-    
+  data () {
+    return {
+      email:"",
+      password:""  
+    }
+  },
+  
+  components:{
+    PersonalHeader
   }
 
 
@@ -56,14 +63,14 @@ export default {
 <style lang="stylus" rel="stylesheet/stylus">
 .Email
   width 100%
-  height 600px
+  height 490px
   background #fff
   .loginPhoneContent
     width 100%
     height 1200px
     position absolute
     left 0
-    top 88px
+    top 150px
     .logo
       width 100%
       height 64px

@@ -37,6 +37,7 @@ export default {
   height 88px
   background #fafafa
   position fixed
+  z-index 20
   .header
     height 88px
     margin 0 20px

@@ -6,6 +6,8 @@ import router from "./router"
 
 import 'lib-flexible'
 
+import './validate'
+
 new Vue({
   el:"#app",
   render:h=>h(App),

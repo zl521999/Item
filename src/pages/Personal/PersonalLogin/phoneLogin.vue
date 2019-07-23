@@ -13,11 +13,15 @@
         <div class="login">
 
           <div class="number">
-            <input type="text" placeholder="请输入手机号">
+            <input type="text" placeholder="请输入手机号" v-model="phone" 
+            maxlength="11" v-validate="`required|mobile`" name="phone">
+            <span style="color:red;font-size:24px;text-align:center">{{ errors.first('phone') }}</span>
           </div>
 
           <div class="news">
-            <input type="text" placeholder="请输入短信验证码">
+            <input type="text" placeholder="请输入短信验证码" v-model="code" 
+            maxlength="6" v-validate="{required:true,digits:'6'}" name="code">
+            <span style="color:red;font-size:24px;text-align:center">{{ errors.first('code') }}</span>
             <button class="btn">获取验证码</button>
           </div>
 
@@ -30,7 +34,7 @@
             <button>登录</button>
           </div>
 
-          <div class="btn3" @click="toLoginPhone">
+          <div class="btn3" @click="$router.back()">
             <button>其他登录方式</button>
           </div>
 
@@ -57,14 +61,17 @@
 <script type="text/ecmascript-6">
 import PersonalHeader from "../../../components/PersonalHeader/PersonalHeader";
 export default {
-  components: {
-    PersonalHeader
+
+  data () {
+    return {
+      phone:"",
+      code:"",
+    }
   },
-
-  props:{
-    toLoginPhone:Function
+ 
+  components:{
+    PersonalHeader
   }
-
 
 };
 </script>
@@ -73,15 +80,15 @@ export default {
 
 .Phone
   width 100%
-  height 600px
+  height 490px
   background #fff
+  
   .loginPhoneContent
     width 100%
-    height 1200px
-    
+    height 1000px
     position absolute
     left 0
-    top 88px
+    top 150px
     .logo
       width 100%
       height 64px

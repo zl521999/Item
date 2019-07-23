@@ -7040,7 +7040,7 @@ vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.npm.taobao.org/vary/download/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
 
-vee-validate@^2.2.9:
+vee-validate@^2.2.13:
   version "2.2.13"
   resolved "https://registry.npm.taobao.org/vee-validate/download/vee-validate-2.2.13.tgz#d77714eeb1bedea24efaaf1774bb2eb3165551ce"
   integrity sha1-13cU7rG+3qJO+q8XdLsusxZVUc4=
