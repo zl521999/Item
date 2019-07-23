@@ -1,5 +1,5 @@
 <template>
-  <div id="personalContainer">
+  <div class="personalContainer">
     <div class="header">
       <div class="left">
         <i class="iconfont icon-shouye" @click="goto('/home')"></i>
@@ -31,7 +31,7 @@ export default {
 
 <style lang="stylus" rel="stylesheet/stylus">
 @import '../../common/stylus/mixins.styl'
-#personalContainer
+.personalContainer
   bottom-border-1px(#f40)
   width 100%
   height 88px
